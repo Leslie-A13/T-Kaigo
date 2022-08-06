@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css?family=Sansita');
+
+/* Header*/
+.tk_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tk_header_logo {
+    padding-top: 5%;
+}
+
+/*section*/
+.gastronomia_section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#icon-section {
+    display: none;
+}
+
+.tk_section_card {
+    height: 144px;
+    width: 288px;
+    margin-top: 7%;
+    border-radius: 1em;
+
+    box-shadow: 0px 0px 10px 1px #5F6368;
+}
+
+.tk_card_info {
+    position: absolute;
+    width: 288px;
+    height: 144px;
+    border-radius: 1em;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Sansita';
+    color: white;
+}
+
+.bg_dark {
+    position: absolute;
+    width: 288px;
+    height: 144px;
+    border-radius: 1em;
+    z-index: 2;
+    background-color: black;
+    opacity: 40%;
+}
+
+.tk_cat_bg {
+    position: absolute;
+    width: 288px;
+    height: 144px;
+    border-radius: 1em;
+    z-index: 1;
+    margin-left: -144px;
+}
+
+@media (max-width: 680px) {
+    img.tk_logo {
+        width: 50%;
+    }
+}
+
+@media (min-width:680px) {
+    .tk_header_logo {
+        padding-top: 3%;
+    }
+
+    img.tk_logo {
+        width: 70%;
+    }
+
+}
+
+@media (min-width:820px) {
+    header {
+        height: 0px;
+        display: none;
+        visibility: hidden;
+    }
+
+    .gastronomia_section {
+        margin-top: 10px;
+        height: 100vh;
+        display: grid;
+    }
+
+    #icon-section {
+        display: block;
+        grid-column: 1/3;
+        grid-row: 1;
+    }
+    .cards-section{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        grid-auto-rows: minmax(100px, auto);
+    }
+}
+@media (min-width:980px) {
+    .cards-section{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
